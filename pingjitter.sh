@@ -38,3 +38,4 @@ pingto=$(echo $target)
         done
     mean=$(echo "scale=2; $total / $items" | bc)
     jitter=$(awk -v items=$items -v diffsum=$diffsum 'BEGIN {a=items;b=1;c=diffsum;print"",(c/(a-b))}' | sed 's/ //g')
+done
